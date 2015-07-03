@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_variantgraph" default="compile.module.variantgraph">
+  <dirname property="module.variantgraph.basedir" file="${ant.file.module_variantgraph}"/>
+  
+  <property name="module.jdk.home.variantgraph" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.variantgraph" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.variantgraph" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.variantgraph" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="variantgraph.output.dir" value="${module.variantgraph.basedir}/target/classes"/>
+  <property name="variantgraph.testoutput.dir" value="${module.variantgraph.basedir}/target/test-classes"/>
+  
+  <path id="variantgraph.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="variantgraph.module.production.classpath">
+    <path refid="${module.jdk.classpath.variantgraph}"/>
+    <path refid="library.maven:_org.apache.jena:jena-tdb:1.1.2.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-arq:2.13.0.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-core:2.13.0.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.6.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-iri:1.1.2.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.7.6.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_xerces:xercesimpl:2.11.0.classpath"/>
+    <path refid="library.maven:_xml-apis:xml-apis:1.4.01.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.2.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.2.5.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.6.classpath"/>
+    <path refid="library.maven:_com.github.jsonld-java:jsonld-java:0.5.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.3.3.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.3.3.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.3.0.classpath"/>
+    <path refid="library.maven:_org.slf4j:jcl-over-slf4j:1.7.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient-cache:4.2.6.classpath"/>
+    <path refid="library.maven:_org.apache.thrift:libthrift:0.9.2.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-csv:1.0.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.3.2.classpath"/>
+  </path>
+  
+  <path id="variantgraph.runtime.production.module.classpath">
+    <pathelement location="${variantgraph.output.dir}"/>
+    <path refid="library.maven:_org.apache.jena:jena-tdb:1.1.2.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-arq:2.13.0.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-core:2.13.0.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.6.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-iri:1.1.2.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.7.6.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_xerces:xercesimpl:2.11.0.classpath"/>
+    <path refid="library.maven:_xml-apis:xml-apis:1.4.01.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.2.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.2.5.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.6.classpath"/>
+    <path refid="library.maven:_com.github.jsonld-java:jsonld-java:0.5.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.3.3.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.3.3.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.3.0.classpath"/>
+    <path refid="library.maven:_org.slf4j:jcl-over-slf4j:1.7.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient-cache:4.2.6.classpath"/>
+    <path refid="library.maven:_org.apache.thrift:libthrift:0.9.2.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-csv:1.0.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.3.2.classpath"/>
+  </path>
+  
+  <path id="variantgraph.module.classpath">
+    <path refid="${module.jdk.classpath.variantgraph}"/>
+    <pathelement location="${variantgraph.output.dir}"/>
+    <path refid="library.maven:_org.apache.jena:jena-tdb:1.1.2.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-arq:2.13.0.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-core:2.13.0.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.6.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-iri:1.1.2.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.7.6.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_xerces:xercesimpl:2.11.0.classpath"/>
+    <path refid="library.maven:_xml-apis:xml-apis:1.4.01.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.2.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.2.5.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.6.classpath"/>
+    <path refid="library.maven:_com.github.jsonld-java:jsonld-java:0.5.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.3.3.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.3.3.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.3.0.classpath"/>
+    <path refid="library.maven:_org.slf4j:jcl-over-slf4j:1.7.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient-cache:4.2.6.classpath"/>
+    <path refid="library.maven:_org.apache.thrift:libthrift:0.9.2.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-csv:1.0.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.3.2.classpath"/>
+  </path>
+  
+  <path id="variantgraph.runtime.module.classpath">
+    <pathelement location="${variantgraph.testoutput.dir}"/>
+    <pathelement location="${variantgraph.output.dir}"/>
+    <path refid="library.maven:_org.apache.jena:jena-tdb:1.1.2.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-arq:2.13.0.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-core:2.13.0.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.7.6.classpath"/>
+    <path refid="library.maven:_org.apache.jena:jena-iri:1.1.2.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.7.6.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+    <path refid="library.maven:_xerces:xercesimpl:2.11.0.classpath"/>
+    <path refid="library.maven:_xml-apis:xml-apis:1.4.01.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.2.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.2.5.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.6.classpath"/>
+    <path refid="library.maven:_com.github.jsonld-java:jsonld-java:0.5.1.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-core:2.3.3.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.3.3.classpath"/>
+    <path refid="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.3.0.classpath"/>
+    <path refid="library.maven:_org.slf4j:jcl-over-slf4j:1.7.6.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient-cache:4.2.6.classpath"/>
+    <path refid="library.maven:_org.apache.thrift:libthrift:0.9.2.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-csv:1.0.classpath"/>
+    <path refid="library.maven:_org.apache.commons:commons-lang3:3.3.2.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.variantgraph">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.variantgraph">
+    <patternset refid="excluded.from.module.variantgraph"/>
+  </patternset>
+  
+  <path id="variantgraph.module.sourcepath">
+    <dirset dir="${module.variantgraph.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  <path id="variantgraph.module.test.sourcepath">
+    <dirset dir="${module.variantgraph.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.variantgraph" depends="compile.module.variantgraph.production,compile.module.variantgraph.tests" description="Compile module VariantGraph"/>
+  
+  <target name="compile.module.variantgraph.production" depends="register.custom.compilers" description="Compile module VariantGraph; production classes">
+    <mkdir dir="${variantgraph.output.dir}"/>
+    <javac2 destdir="${variantgraph.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.variantgraph}/javac">
+      <compilerarg line="${compiler.args.variantgraph}"/>
+      <bootclasspath refid="variantgraph.module.bootclasspath"/>
+      <classpath refid="variantgraph.module.production.classpath"/>
+      <src refid="variantgraph.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.variantgraph"/>
+    </javac2>
+    
+    <copy todir="${variantgraph.output.dir}">
+      <fileset dir="${module.variantgraph.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.variantgraph.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.variantgraph.tests" depends="register.custom.compilers,compile.module.variantgraph.production" description="compile module VariantGraph; test classes" unless="skip.tests">
+    <mkdir dir="${variantgraph.testoutput.dir}"/>
+    <javac2 destdir="${variantgraph.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.variantgraph}/javac">
+      <compilerarg line="${compiler.args.variantgraph}"/>
+      <bootclasspath refid="variantgraph.module.bootclasspath"/>
+      <classpath refid="variantgraph.module.classpath"/>
+      <src refid="variantgraph.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.variantgraph"/>
+    </javac2>
+    
+    <copy todir="${variantgraph.testoutput.dir}">
+      <fileset dir="${module.variantgraph.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.variantgraph" description="cleanup module">
+    <delete dir="${variantgraph.output.dir}"/>
+    <delete dir="${variantgraph.testoutput.dir}"/>
+  </target>
+</project>

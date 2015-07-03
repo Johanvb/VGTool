@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AntConfiguration">
+    <buildFile url="file://$PROJECT_DIR$/variantgraph.xml">
+      <maximumHeapSize value="4096" />
+      <maximumStackSize value="50" />
+    </buildFile>
+  </component>
+</project>
