@@ -30,12 +30,7 @@ public class Main {
 
         while (true) {
             System.out.println("Choose option:");
-            System.out.println("(L) Load original file.");
             System.out.println("(LF) Load file from path.");
-            System.out.println("(C) Load different chromosomes file.");
-            System.out.println("(LP) Load phased file.");
-            System.out.println("(SV) Load structural variants file.");
-            System.out.println("(G) Load different genotypes file.");
             System.out.println("(R) Load from rdf.");
             System.out.println("(W) Write graphs to files.");
             System.out.println("(P) Add probabilities to graphs.");
@@ -47,95 +42,17 @@ public class Main {
 
             String input = in.nextLine();
 
-            if (input.equals("L")) {
-                System.out.println("\nLoading original file.");
-
-                String fileNumber = in.nextLine();
-
-                int number = Integer.parseInt(fileNumber);
-
-                switch (number){
-                    case 1:
-                        fileToLoad = "VCF/5000_testdata.vcf";
-                        break;
-                    case 2:
-                        fileToLoad = "VCF/10000_testdata.vcf";
-                        break;
-                    case 3:
-                        fileToLoad = "VCF/100000_testdata.vcf";
-                        break;
-                    case 4:
-                        fileToLoad = "VCF/250000_testdata.vcf";
-                        break;
-                    case 5:
-                        fileToLoad = "VCF/1000000_testdata.vcf";
-                        break;
-                    case 6:
-                        fileToLoad = "VCF/new_5000_testdata.vcf";
-                        break;
-                    case 7:
-                        fileToLoad = "VCF/new_10000_testdata.vcf";
-                        break;
-                    case 8:
-                        fileToLoad = "VCF/new_100000_testdata.vcf";
-                        break;
-                    case 9:
-                        fileToLoad = "VCF/new_250000_testdata.vcf";
-                        break;
-                    case 10:
-                        fileToLoad = "VCF/new_1000000_testdata.vcf";
-                        break;
-                    case 11:
-                        fileToLoad = "VCF/new_all_var500_testdata.vcf";
-                        break;
-                    case 12:
-                        fileToLoad = "VCF/new_all_var1000_testdata.vcf";
-                        break;
-                    case 13:
-                        fileToLoad = "VCF/new_all_var2000_testdata.vcf";
-                        break;
-                    case 14:
-                        fileToLoad = "VCF/new_all_var5000_testdata.vcf";
-                        break;
-                    case 15:
-                        fileToLoad = "VCF/new_all_var10000_testdata.vcf";
-                        break;
-                }
-
-//                fileToLoad = "VCF/50trios.vcf";
-                // fileToLoad = "VCF/original_trimmed_mody.vcf";
-//                fileToLoad = "VCF/extracted_50trios_chr21.vcf";
-
-//                fileToLoad = "VCF/50trios.chr21.unphased.vcf";
-//                fileToLoad = "VCF/10k_trimmed_mody_research_samples_3000.vcf";
-
-                load();
-            } else if (input.equals("LF")) {
+           if (input.equals("LF")) {
                 System.out.println("\nEnter filepath for file.");
 
                 fileToLoad = in.nextLine();
                 load();
-            } else if (input.equals("LP")) {
-                System.out.println("\nLoading phased file.");
-
-                fileToLoad = "VCF/modified_phasing.vcf";
-                load();
-            } else if (input.equals("R")) {
+            }  else if (input.equals("R")) {
                 System.out.println("\nReading from RDF.");
 
                 StorageInputHandler.readGraphFromFile();
                 mergeGraphs();
-            } else if (input.equals("C")) {
-                System.out.println("\nLoading modified chromosomes file.");
-
-                fileToLoad = "VCF/modified_chromosome.vcf";
-                load();
-            } else if (input.equals("G")) {
-                System.out.println("\nLoading modified genotypes file.");
-
-                fileToLoad = "VCF/modified_genotypes.vcf";
-                load();
-            } else if (input.equals("W")) {
+            }  else if (input.equals("W")) {
                 System.out.println("\nSaving graphs to RDF.");
 
                 writeGraphs();
@@ -147,11 +64,6 @@ public class Main {
                 System.out.println("\nSizes:");
 
                 GraphPrinter.printAllGraphSizes();
-            } else if (input.equals("SV")) {
-                System.out.println("\nLoading structural variants file.");
-
-                fileToLoad = "VCF/structural_variants.vcf";
-                load();
             } else if (input.contains("S")) {
 
                 createSamples(input);
