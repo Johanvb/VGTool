@@ -22,4 +22,8 @@ public class Constants {
     public static boolean compressTrees = true;
     public static boolean compressIndividualSets = false;
     public static boolean shouldUseDatabase = false;
+
+    public static int queueSize = 2;
+    public static float pickHeadProbability = 0.9f;
+
 }
