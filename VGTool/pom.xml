@@ -34,15 +34,13 @@
             <version>2.13.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>samtools</groupId>
+		 <dependency>
+            <groupId>com.github.samtools</groupId>
             <artifactId>htsjdk</artifactId>
+            <version>1.134</version>
         </dependency>
-        <dependency>
-            <groupId>samtools</groupId>
-            <artifactId>htsjdk</artifactId>
-            <version>1.120.1620</version>
-        </dependency>
+
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
