@@ -6,11 +6,14 @@ import Entities.Jena.Probabilities.VGProbabilityNode;
 import Entities.Jena.Probabilities.VGProbabilityTree;
 import Entities.Sampling.SampledGraph;
 import Entities.Sampling.SampledIndividual;
+import Utilities.Constants;
+
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
+import java.util.Random;
 
 /**
  * Created by Johan on 14/05/15.
@@ -32,7 +35,7 @@ public class SamplerRunnable implements Runnable {
         this.individual = individual;
         this.latch = latch;
 
-        treesQueue = new ArrayDeque<VGProbabilityTree>();
+        treesQueue = new ArrayDeque<VGProbabilityTree>(Constants.queueSize);
 
         currentPath = new ArrayList<VGProbabilityNode>();
     }
@@ -42,29 +45,43 @@ public class SamplerRunnable implements Runnable {
             int index = 0;
             VGPosition currentPosition;
             VGProbabilityNode currentProbabilityNode = null;
+            Random rand = new Random();
+            ArrayList<VGProbabilityNode> selectionPath = null;
+            ArrayList<VGProbabilityTree> selectionTreeQueue = null;
 
             while (index < graph.positions.size()) {
+
+                while (currentPath.size() > Constants.queueSize)
+                    currentPath.remove(0);
+
+                // FIXME: one shorter than currentPath (usually)
+                while (treesQueue.size() > Constants.queueSize)
+                    treesQueue.removeFirst();
 
                 currentPosition = graph.positions.get(index);
 
                 if (currentProbabilityNode != null) {
 
-                    VGProbabilityNode tempNode = currentProbabilityNode;
+                    selectionPath = new ArrayList<VGProbabilityNode>(currentPath);
+                    selectionTreeQueue = new ArrayList<VGProbabilityTree>(treesQueue);
 
-                    while (tempNode == null || !choiceIsValid(tempNode, currentPosition)) {
-                        if (treesQueue.isEmpty()) {
-                            tempNode = null;
-                            currentPath = new ArrayList<VGProbabilityNode>();
-                            break;
+                    // Make choice: probabilisticly shorten selection path according to geometric probability distribution
+                    while(selectionTreeQueue.size() > 1) {
+                        // handle if trees in front of queue are dead!! (i.e., if the queue is getting too long)
+                        if (selectionTreeQueue.get(0).getChildAtEndOfPath(selectionPath)== null) {
+                            selectionPath.remove(0);
+                            selectionTreeQueue.remove(0);
+                            continue;
                         }
-
-                        currentPath.remove(0);
-
-                        tempNode = treesQueue.pollFirst().getChildAtEndOfPath(currentPath);
+                        if (rand.nextFloat() < Constants.pickHeadProbability)
+                            break;
+                        else {
+                            selectionPath.remove(0);
+                            selectionTreeQueue.remove(0);
+                        }
                     }
-
-                    currentProbabilityNode = tempNode;
-
+                    if (selectionTreeQueue.size() >= 1)
+                        currentProbabilityNode = selectionTreeQueue.remove(0).getChildAtEndOfPath(selectionPath);
                 }
 
                 if (currentProbabilityNode == null || !currentProbabilityNode.hasChildren()) {
@@ -78,9 +95,8 @@ public class SamplerRunnable implements Runnable {
 
                 } else {
                     currentProbabilityNode = currentProbabilityNode.getPlausibleChild();
-                    treesQueue.addLast(currentPosition.getProbabilityTree());
                 }
-
+                treesQueue.addLast(currentPosition.getProbabilityTree());
 
                 currentPath.add(currentProbabilityNode);
 
