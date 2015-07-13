@@ -51,6 +51,11 @@ public class SamplerRunnable implements Runnable {
 
             while (index < graph.positions.size()) {
 
+                if(index % 1500 == 0 && index != 0){
+                    System.out.println("Sampling has reached " + index + " for thread " + Thread.currentThread().getId());
+                }
+
+
                 while (currentPath.size() > Constants.queueSize)
                     currentPath.remove(0);
 
@@ -111,6 +116,8 @@ public class SamplerRunnable implements Runnable {
 
         } finally {
             latch.countDown();
+            System.out.println("Sampling done for thread " + Thread.currentThread().getId());
+
         }
     }
 

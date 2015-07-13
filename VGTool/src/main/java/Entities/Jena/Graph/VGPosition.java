@@ -115,13 +115,15 @@ public class VGPosition extends JenaObject implements Comparable<VGPosition> {
 
 
     public VGProbabilityTree getProbabilityTree() {
-        if(probabilityTree != null){
-            return probabilityTree;
-        }else if(compressedTree != null){
-            return compressedTree.unCompress();
-        }
+        synchronized (this) {
+            if (probabilityTree != null) {
+                return probabilityTree;
+            } else if (compressedTree != null) {
+                return compressedTree.unCompress();
+            }
 
-        return null;
+            return null;
+        }
     }
 
     public void setProbabilityTree(VGProbabilityTree probabilityTree) {

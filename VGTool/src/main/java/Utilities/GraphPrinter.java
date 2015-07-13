@@ -26,7 +26,7 @@ public class GraphPrinter {
         for (List<VariantGraph> graphs : EnclosingModel.chromosomeGraphs.values()) {
 
             for (VariantGraph graph : graphs) {
-                System.out.println("Graph " + graph.getId() + " " + graph.hashCode() + " size  " + VariantGraphUtilities.totalNodesInGraph(graph));
+                System.out.println("Graph " + graph.getId() + " size  " + VariantGraphUtilities.totalNodesInGraph(graph));
             }
 
         }

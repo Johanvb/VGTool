@@ -30,6 +30,8 @@ public class Main {
 
         while (true) {
             System.out.println("Choose option:");
+            System.out.println("(L1) Load File1.");
+            System.out.println("(L2) Load File2.");
             System.out.println("(LF) Load file from path.");
             System.out.println("(R) Load from rdf.");
             System.out.println("(W) Write graphs to files.");
@@ -42,7 +44,14 @@ public class Main {
 
             String input = in.nextLine();
 
-           if (input.equals("LF")) {
+            if(input.equals("L1")){
+                fileToLoad = "10000_testdata.vcf";
+                load();
+            }else if(input.equals("L2")){
+                fileToLoad = "new_10000_testdata.vcf";
+                load();
+            }
+            else if (input.equals("LF")) {
                 System.out.println("\nEnter filepath for file.");
 
                 fileToLoad = in.nextLine();

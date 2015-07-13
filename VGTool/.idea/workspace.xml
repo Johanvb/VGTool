@@ -34,17 +34,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+              <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SamplesWriter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SamplesWriter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/IO/SamplesWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15393387">
-              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -60,35 +60,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VCFToGraphsBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/IO/VCFToGraphsBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="99" column="70" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GeneticsUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/GeneticsUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#419#440#0" expanded="false" />
-                <element signature="e#529#556#0" expanded="false" />
-                <element signature="e#647#678#0" expanded="false" />
-                <element signature="e#756#772#0" expanded="false" />
-                <element signature="e#850#865#0" expanded="false" />
-                <element signature="e#946#961#0" expanded="false" />
-                <element signature="e#1711#1712#0" expanded="false" />
-                <element signature="e#1758#1759#0" expanded="false" />
-                <element signature="e#3454#3455#0" expanded="false" />
-                <element signature="e#3523#3524#0" expanded="false" />
+                <element signature="e#3454#3455#0" expanded="true" />
+                <element signature="e#3523#3524#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,45 +77,18 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/GraphPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="142" column="29" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageInputHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/IO/StorageInputHandler.java">
+      <file leaf-file-name="VGProbabilityNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Jena/Probabilities/VGProbabilityNode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnclosingModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/EnclosingModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#265#287#0" expanded="false" />
-                <element signature="e#362#376#0" expanded="false" />
-                <element signature="e#460#488#0" expanded="false" />
-                <element signature="e#552#553#0" expanded="false" />
-                <element signature="e#584#585#0" expanded="false" />
-                <element signature="e#1174#1188#0" expanded="false" />
-                <element signature="e#1594#1608#0" expanded="false" />
-                <element signature="e#2093#2113#0" expanded="false" />
-                <element signature="e#2536#2550#0" expanded="false" />
-                <element signature="e#3025#3033#0" expanded="false" />
-                <element signature="e#3194#3208#0" expanded="false" />
-              </folding>
+              <caret line="274" column="49" selection-start-line="274" selection-start-column="49" selection-end-line="274" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,15 +97,28 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="107" column="41" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3483#3491#0" expanded="false" />
-                <element signature="e#3548#3555#0" expanded="false" />
-                <element signature="e#3615#3622#0" expanded="false" />
-                <element signature="e#4522#4532#0" expanded="false" />
-                <element signature="e#5050#5064#0" expanded="false" />
-              </folding>
+              <caret line="100" column="48" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SamplerRunnable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Multithreading/Threads/SamplerRunnable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VGPosition.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Jena/Graph/VGPosition.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.86628735">
+              <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,17 +127,8 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Jena/Probabilities/VGCompressedProbabilityTree.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#650#658#0" expanded="false" />
-                <element signature="e#2432#2433#0" expanded="false" />
-                <element signature="e#2504#2505#0" expanded="false" />
-                <element signature="e#2545#2546#0" expanded="false" />
-                <element signature="e#2587#2588#0" expanded="false" />
-                <element signature="e#2644#2645#0" expanded="false" />
-                <element signature="e#2698#2699#0" expanded="false" />
-              </folding>
+              <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -209,9 +165,7 @@
         <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Graph/VGAllele.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Deprecated/VGAllele.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Deprecated/VGSequenceDeprecated.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utilities/GraphPrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Deprecated/VGPositionDeprecated.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Multithreading/Threads/SamplerRunnable.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Other/VGIndividualCollection.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utilities/VariantGraphUtilities.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/JenaObject.java" />
@@ -232,8 +186,6 @@
         <option value="$PROJECT_DIR$/src/main/java/IO/VCFToGraphsBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Graph/VariantGraph.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Probabilities/VGProbabilityGenotype.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Graph/VGPosition.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Probabilities/VGProbabilityNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/IO/StorageInputHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utilities/EnclosingModel.java" />
@@ -242,6 +194,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Utilities/AlleleUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utilities/GeneticsUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utilities/GraphPrinter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Probabilities/VGProbabilityNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Multithreading/Threads/SamplerRunnable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Entities/Jena/Graph/VGPosition.java" />
       </list>
     </option>
   </component>
@@ -262,6 +218,38 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="VariantGraph" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="VariantGraph" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="VariantGraph" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="assembly" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -297,9 +285,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -318,8 +304,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VariantGraph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VGTool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,7 +329,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="SamplesW&#9;FILE&#9;file:///Users/Johan/Documents/VGTool/VGTool/src/main/java/IO/SamplesWriter.java&#10;Constan&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/Constants.java&#10;A&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Allel&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Comp&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Other/VGCompressedIndividualCollection.java&#10;Thread&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/ThreadHandler.java&#10;VGPro&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGProbabilityGenotype.java&#10;Main&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Main/Main.java&#10;Vgpro&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGProbabilityNode.java&#10;Out&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/IO/OutputHandler.java&#10;Proba&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java&#10;Utils&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Variant&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VariantGraph.java&#10;Constants&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/Constants.java&#10;All&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Enc&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/EnclosingModel.java&#10;Probab&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java&#10;Jena&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/JenaObject.java&#10;VGPos&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGPosition.java&#10;VGGE&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGGenotype.java&#10;Pom&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/pom.xml&#10;SampleU&#9;PSI&#9;JAVA://Entities.Sampling.SampleUtilities&#10;pom&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/pom.xml&#10;sa&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/Threads/SamplerRunnable.java&#10;Sam&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/Threads/SamplerRunnable.java&#10;Compre&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGCompressedProbabilityTree.java&#10;VGSeq&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGSequence.java&#10;Allele&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Shrin&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/GraphShrinker.java&#10;Sampler&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/Threads/SamplerRunnable.java&#10;VGPo&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGPosition.java&#10;Sampl&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/Threads/SamplerRunnable.java&#10;Probabi&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java&#10;GraphExp&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/GraphExpander.java&#10;GraphM&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/GraphMerger.java&#10;Outp&#9;PSI&#9;JAVA://IO.OutputHandler&#10;Tree&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGProbabilityTree.java&#10;VGSe&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGSequence.java&#10;Node&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGProbabilityNode.java&#10;Pro&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java&#10;Thre&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/ThreadHandler.java&#10;Buil&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/IO/VCFToGraphsBuilder.java&#10;Indiv&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Other/VGIndividualCollection.java&#10;Cons&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/Constants.java&#10;VGp&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGPosition.java&#10;Con&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/Constants.java&#10;VGPr&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGProbabilityGenotype.java&#10;Const&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/Constants.java&#10;Alle&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Bui&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/IO/VCFToGraphsBuilder.java" />
+    <property name="SearchEverywhereHistoryKey" value="VGPo&#9;FILE&#9;file:///Users/Johan/Documents/VGTool/VGTool/src/main/java/Entities/Jena/Graph/VGPosition.java&#10;SamplerR&#9;FILE&#9;file:///Users/Johan/Documents/VGTool/VGTool/src/main/java/Multithreading/Threads/SamplerRunnable.java&#10;Probabil&#9;FILE&#9;file:///Users/Johan/Documents/VGTool/VGTool/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java&#10;Const&#9;FILE&#9;file:///Users/Johan/Documents/VGTool/VGTool/src/main/java/Utilities/Constants.java&#10;VGProbabilityNode&#9;FILE&#9;file:///Users/Johan/Documents/VGTool/VGTool/src/main/java/Entities/Jena/Probabilities/VGProbabilityNode.java&#10;Main&#9;FILE&#9;file:///Users/Johan/Documents/VGTool/VGTool/src/main/java/Main/Main.java&#10;SamplesW&#9;FILE&#9;file:///Users/Johan/Documents/VGTool/VGTool/src/main/java/IO/SamplesWriter.java&#10;Constan&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/Constants.java&#10;A&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Allel&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Comp&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Other/VGCompressedIndividualCollection.java&#10;Thread&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/ThreadHandler.java&#10;VGPro&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGProbabilityGenotype.java&#10;Vgpro&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGProbabilityNode.java&#10;Out&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/IO/OutputHandler.java&#10;Proba&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java&#10;Utils&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Variant&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VariantGraph.java&#10;Constants&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/Constants.java&#10;All&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Enc&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/EnclosingModel.java&#10;Probab&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java&#10;Jena&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/JenaObject.java&#10;VGPos&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGPosition.java&#10;VGGE&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGGenotype.java&#10;Pom&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/pom.xml&#10;SampleU&#9;PSI&#9;JAVA://Entities.Sampling.SampleUtilities&#10;pom&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/pom.xml&#10;sa&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/Threads/SamplerRunnable.java&#10;Sam&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/Threads/SamplerRunnable.java&#10;Compre&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGCompressedProbabilityTree.java&#10;VGSeq&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGSequence.java&#10;Allele&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/AlleleUtils.java&#10;Shrin&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/GraphShrinker.java&#10;Sampler&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/Threads/SamplerRunnable.java&#10;Sampl&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/Threads/SamplerRunnable.java&#10;Probabi&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java&#10;GraphExp&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/GraphExpander.java&#10;GraphM&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/GraphMerger.java&#10;Outp&#9;PSI&#9;JAVA://IO.OutputHandler&#10;Tree&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGProbabilityTree.java&#10;VGSe&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGSequence.java&#10;Node&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Probabilities/VGProbabilityNode.java&#10;Pro&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java&#10;Thre&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Multithreading/ThreadHandler.java&#10;Buil&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/IO/VCFToGraphsBuilder.java&#10;Indiv&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Other/VGIndividualCollection.java&#10;Cons&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/Constants.java&#10;VGp&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Entities/Jena/Graph/VGPosition.java&#10;Con&#9;FILE&#9;file:///Users/Johan/Documents/Master/variantgraph/GATK/VariantGraph/src/main/java/Utilities/Constants.java" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -543,7 +545,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -551,22 +553,22 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13701658" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13492064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12576313" sideWeight="0.49423394" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12698413" sideWeight="0.49423394" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24542125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24542125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1922652" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="-900" y="259" width="900" height="1417" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11843712" sideWeight="0.50576603" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33038673" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="-900" y="259" width="900" height="1417" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24265403" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13751376" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -757,13 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Multithreading/Threads/SamplerRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Sampling/SampledGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -891,30 +886,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Jena/Graph/VGPosition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="85" selection-start-line="150" selection-start-column="85" selection-end-line="150" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/IO/StorageInputHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/GraphPrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="142" column="29" selection-start-line="142" selection-start-column="29" selection-end-line="142" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -922,52 +898,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#265#287#0" expanded="false" />
-            <element signature="e#362#376#0" expanded="false" />
-            <element signature="e#460#488#0" expanded="false" />
-            <element signature="e#552#553#0" expanded="false" />
-            <element signature="e#584#585#0" expanded="false" />
-            <element signature="e#1174#1188#0" expanded="false" />
-            <element signature="e#1594#1608#0" expanded="false" />
-            <element signature="e#2093#2113#0" expanded="false" />
-            <element signature="e#2536#2550#0" expanded="false" />
-            <element signature="e#3025#3033#0" expanded="false" />
-            <element signature="e#3194#3208#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/IO/VCFToGraphsBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="107" column="41" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3483#3491#0" expanded="false" />
-            <element signature="e#3548#3555#0" expanded="false" />
-            <element signature="e#3615#3622#0" expanded="false" />
-            <element signature="e#4522#4532#0" expanded="false" />
-            <element signature="e#5050#5064#0" expanded="false" />
-          </folding>
+          <caret line="99" column="70" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Jena/Probabilities/VGCompressedProbabilityTree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/IO/SamplesWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#650#658#0" expanded="false" />
-            <element signature="e#2432#2433#0" expanded="false" />
-            <element signature="e#2504#2505#0" expanded="false" />
-            <element signature="e#2545#2546#0" expanded="false" />
-            <element signature="e#2587#2588#0" expanded="false" />
-            <element signature="e#2644#2645#0" expanded="false" />
-            <element signature="e#2698#2699#0" expanded="false" />
-          </folding>
+          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/GraphPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -979,55 +942,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IO/VCFToGraphsBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Jena/Probabilities/VGProbabilityNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="70" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="274" column="49" selection-start-line="274" selection-start-column="49" selection-end-line="274" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utilities/GeneticsUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#419#440#0" expanded="false" />
-            <element signature="e#529#556#0" expanded="false" />
-            <element signature="e#647#678#0" expanded="false" />
-            <element signature="e#756#772#0" expanded="false" />
-            <element signature="e#850#865#0" expanded="false" />
-            <element signature="e#946#961#0" expanded="false" />
-            <element signature="e#1711#1712#0" expanded="false" />
-            <element signature="e#1758#1759#0" expanded="false" />
-            <element signature="e#3454#3455#0" expanded="false" />
-            <element signature="e#3523#3524#0" expanded="false" />
+            <element signature="e#3454#3455#0" expanded="true" />
+            <element signature="e#3523#3524#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Jena/Probabilities/VGProbabilityNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63791144">
-          <caret line="267" column="21" selection-start-line="267" selection-start-column="21" selection-end-line="267" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Jena/Probabilities/VGCompressedProbabilityTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="59" selection-start-line="37" selection-start-column="59" selection-end-line="37" selection-end-column="59" />
+          <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/IO/SamplesWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/GraphHandling/ProbabilitiesTreesBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15393387">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="48" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Multithreading/Threads/SamplerRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Entities/Jena/Graph/VGPosition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.86628735">
+          <caret line="144" column="5" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
           <folding />
         </state>
       </provider>
