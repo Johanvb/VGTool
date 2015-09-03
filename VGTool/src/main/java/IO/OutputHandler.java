@@ -22,7 +22,7 @@ import java.io.IOException;
  */
 public class OutputHandler {
 
-    public void writeToFile(VariantGraph vg) throws IOException {
+    public void writeToFile(VariantGraph vg, String filename) throws IOException {
 
         long first = System.currentTimeMillis();
         System.out.println("Saving " + vg.getId());
@@ -32,7 +32,11 @@ public class OutputHandler {
 
         MyBean2RDF writer = new MyBean2RDF(m);
 
-        File file = new File("VCFDataBase/VCF_Files/" + vg.getId() + ".ttl");
+        if (filename == null)
+            filename = "VCFDataBase/VCF_Files/" + vg.getId() + ".ttl";
+
+        File file = new File(filename);
+
         file.getParentFile().mkdirs();
         if (!file.exists()) {
             file.createNewFile();

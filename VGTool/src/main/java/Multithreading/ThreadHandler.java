@@ -53,12 +53,13 @@ public class ThreadHandler {
 //        startGraphExpanderThreads(list);
     }
 
-    public static void startGraphWritersThreadWithGraphs(Set<VariantGraph> graphSet) throws InterruptedException {
+    public static void startGraphWritersThreadWithGraphs(Set<VariantGraph> graphSet, String filename) throws InterruptedException {
 
         CountDownLatch latch = new CountDownLatch(graphSet.size());
 
+        // FIXME: Ensure that graphSet.size == 1 or use alternative scheme for filenames
         for (VariantGraph g : graphSet) {
-            GraphWriterRunnable runnable = new GraphWriterRunnable(g, latch);
+            GraphWriterRunnable runnable = new GraphWriterRunnable(g, latch, filename);
             Thread thread = new Thread(runnable);
             thread.start();
         }
@@ -156,12 +157,11 @@ public class ThreadHandler {
         System.out.println("Expanded in " + (t2 - t1) + " ms.");
     }
 
-    public static void startSamplingThreads(VariantGraph graph, int numberOfSamples) throws InterruptedException, IOException {
+    public static SampledGraph startSamplingThreads(VariantGraph graph, int numberOfSamples) throws InterruptedException, IOException {
 
         List<SampledIndividual> individuals = SampleUtilities.getSampledIndividuals(numberOfSamples);
 
         SampledGraph sampledGraph = new SampledGraph(graph, individuals);
-
 
         Scanner in = new Scanner(System.in);
 
@@ -195,19 +195,10 @@ public class ThreadHandler {
 
         System.out.println("Time to create samples " + (t2 - t1) + " ms.");
 
-        System.out.println("\nSave samples to file? (Y/N)");
-
-        if (in.next().equals("Y")) {
-            System.out.println("Enter name for new file.");
-            String fileName = in.next();
-
-            SamplesWriter.saveSamplesForChromosome(sampledGraph, fileName);
-        }
-
-
+        return sampledGraph;
     }
 
-    public static void startSamplingThreadsForAllGraphs(int numberOfSamples) throws InterruptedException, IOException {
+    public static List<SampledGraph> startSamplingThreadsForAllGraphs(int numberOfSamples) throws InterruptedException, IOException {
 
         List<SampledGraph> sampledGraphs = new ArrayList<SampledGraph>();
 
@@ -235,15 +226,6 @@ public class ThreadHandler {
 
         long t2 = System.currentTimeMillis();
         System.out.println("Time to create samples " + (t2 - t1) + " ms.");
-        System.out.println("\nSave samples to file? (Y/N)");
-        Scanner in = new Scanner(System.in);
-
-        if (in.next().equals("Y")) {
-            System.out.println("Enter name for new file.");
-            String fileName = in.next();
-
-            SamplesWriter.saveSamplesForAllChromosomes(sampledGraphs, fileName);
-        }
-
+        return sampledGraphs;
     }
 }

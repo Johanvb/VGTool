@@ -14,13 +14,14 @@ public class GraphWriterRunnable implements Runnable {
 
     VariantGraph graph;
     CountDownLatch latch;
+    String filename;
 
-    public GraphWriterRunnable(VariantGraph graph, CountDownLatch latch) {
+    public GraphWriterRunnable(VariantGraph graph, CountDownLatch latch, String filename) {
         this.graph = graph;
         this.latch = latch;
+        this.filename = filename;
     }
 
-    @Override
     public void run() {
         OutputHandler outputHandler = new OutputHandler();
 
@@ -32,15 +33,12 @@ public class GraphWriterRunnable implements Runnable {
             }
         }else{
             try {
-                outputHandler.writeToFile(graph);
+                outputHandler.writeToFile(graph, filename);
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
                 latch.countDown();
             }
         }
-
-
     }
-
 }

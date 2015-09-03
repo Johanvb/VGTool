@@ -37,13 +37,12 @@ public class StorageInputHandler {
     }
 
 
-    public static void readGraphFromFile() {
-
+    public static void readGraphFromFile(String file) {
             System.out.println("Loading");
             long first = System.currentTimeMillis();
 
             Model m = ModelFactory.createDefaultModel();
-            RDFDataMgr.read(m, "VCFDataBase/VCF_Files/chr1.ttl", Lang.TURTLE);
+            RDFDataMgr.read(m, file, Lang.TURTLE);
 
             Jenabean b = Jenabean.instance();
             b.bind(m);
@@ -57,5 +56,4 @@ public class StorageInputHandler {
             System.out.println("Loaded in " + (second - first) + " ms.");
 
     }
-
 }

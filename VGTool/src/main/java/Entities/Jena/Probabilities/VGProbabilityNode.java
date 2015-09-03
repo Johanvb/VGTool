@@ -92,7 +92,7 @@ public class VGProbabilityNode extends JenaObject{
         this.numberOfIndividuals = numberOfIndividuals;
     }
 
-    public void setProbabilityFromChildren() {
+    public synchronized void setProbabilityFromChildren() {
 
         if (children != null && !children.isEmpty() && !children.iterator().next().hasSetProbability) {
             for (VGProbabilityNode child : children) {
@@ -272,7 +272,7 @@ public class VGProbabilityNode extends JenaObject{
         }
     }
 
-    public VGProbabilityNode getOrCreateGenotypeWithValue(VGProbabilityGenotype uncompressed, String id) {
+    public synchronized VGProbabilityNode getOrCreateGenotypeWithValue(VGProbabilityGenotype uncompressed, String id) {
         if(children == null){
             children = new HashSet<VGProbabilityNode>();
         }
