@@ -101,7 +101,7 @@ public class VGCompressedProbabilityTree {
 
     VGProbabilityTree unCompressedTree;
 
-    public VGProbabilityTree unCompress() {
+    public synchronized VGProbabilityTree unCompress() {
         unCompressedTree = new VGProbabilityTree(id);
 
         unCompressedTree.root = new VGProbabilityNode(id+":"+unCompressedTree.getValidNodeId());
