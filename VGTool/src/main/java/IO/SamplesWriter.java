@@ -25,7 +25,7 @@ public class SamplesWriter {
 
         long t1 = System.currentTimeMillis();
 
-        File file = new File("VCFDataBase/generated_samples/" + fileName);
+        File file = new File(fileName);
         file.getParentFile().mkdirs();
         if (!file.exists()) {
             file.createNewFile();
@@ -132,7 +132,8 @@ public class SamplesWriter {
 
         System.out.println("Saving " + fileName);
 
-        File file = new File("VCFDataBase/generated_samples/" + fileName);
+        File file = new File(fileName);
+
         file.getParentFile().mkdirs();
         if (!file.exists()) {
             file.createNewFile();
