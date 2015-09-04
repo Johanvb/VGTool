@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.Random;
+import java.util.concurrent.Semaphore;
 
 /**
  * Created by Johan on 14/05/15.
@@ -24,16 +25,18 @@ public class SamplerRunnable implements Runnable {
     SampledGraph sampledGraph;
     SampledIndividual individual;
     CountDownLatch latch;
+    Semaphore sem;
 
     ArrayDeque<VGProbabilityTree> treesQueue;
 
     List<VGProbabilityNode> currentPath;
 
-    public SamplerRunnable(VariantGraph graph, SampledGraph sampledGraph, SampledIndividual individual, CountDownLatch latch) {
+    public SamplerRunnable(VariantGraph graph, SampledGraph sampledGraph, SampledIndividual individual, CountDownLatch latch, Semaphore sem) {
         this.graph = graph;
         this.sampledGraph = sampledGraph;
         this.individual = individual;
         this.latch = latch;
+        this.sem = sem;
 
         treesQueue = new ArrayDeque<VGProbabilityTree>(Constants.queueSize);
 
@@ -42,6 +45,8 @@ public class SamplerRunnable implements Runnable {
 
     public void run() {
         try {
+            sem.acquire();
+
             int index = 0;
             VGPosition currentPosition;
             VGProbabilityNode currentProbabilityNode = null;
@@ -86,7 +91,6 @@ public class SamplerRunnable implements Runnable {
 
                 if (currentProbabilityNode == null || !currentProbabilityNode.hasChildren()) {
                     currentProbabilityNode = currentPosition.getPlausibleChoice();
-
                     if (currentProbabilityNode == null) {
                         //Skip gaps
                         index++;
@@ -109,7 +113,11 @@ public class SamplerRunnable implements Runnable {
                 index++;
             }
 
+        } catch (InterruptedException e) {
+            System.out.println(e.toString());
         } finally {
+            if (sem != null)
+                sem.release();
             latch.countDown();
         }
     }

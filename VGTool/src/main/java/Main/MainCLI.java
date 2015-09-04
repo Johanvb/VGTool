@@ -89,11 +89,23 @@ public class MainCLI {
                .withLongOpt("queue-size")
                .create("qs"));
 
+       options.addOption(OptionBuilder.withArgName("Integer")
+               .hasArg()
+               .withDescription("Probability of selecting using largest available context when sampling (defines genometric sampling distribution) (default=" + Constants.pickHeadProbability + ")")
+               .withLongOpt("queue-probability")
+               .create("qp"));
+
        options.addOption(OptionBuilder.withArgName("I")
                .hasArg()
                .withDescription("Consider only chromosome <I>")
                .withLongOpt("chr")
                .create("c"));
+
+       options.addOption(OptionBuilder.withArgName("Integer")
+               .hasArg()
+               .withDescription("Maximal number of concurrent threads used by program (default is number of available processors=" + Constants.threads + ")")
+               .withLongOpt("threads")
+               .create("t"));
 
         options.addOption("p", "probabilities", false, "Add probabilities to graph (implied by -s option)");
         options.addOption("i", "interactive", false, "Run program in interactive mode");
@@ -106,7 +118,7 @@ public class MainCLI {
 			if (line.hasOption("help")) {
 				// automatically generate the help statement
 				HelpFormatter formatter = new HelpFormatter();
-				formatter.printHelp( "java VGTool.jar", options );
+				formatter.printHelp( "java -jar VGTool.jar", options );
 			}
 
             if (line.hasOption("qs")) {
@@ -114,9 +126,19 @@ public class MainCLI {
                 System.out.println("Queue size set to " + Constants.queueSize);
             }
 
+            if (line.hasOption("qp")) {
+                Constants.pickHeadProbability = Float.parseFloat(line.getOptionValue("qp"));
+                System.out.println("Queue probability set to " + Constants.pickHeadProbability);
+            }
+
             if (line.hasOption("cs")) {
                 Constants.individualsThreshold = Integer.parseInt(line.getOptionValue("cs"));
                 System.out.println("Minimum context size set to " + Constants.individualsThreshold);
+            }
+
+            if (line.hasOption("t")) {
+                Constants.threads = Integer.parseInt(line.getOptionValue("t"));
+                System.out.println("Maximum thread utilization is set to " + Constants.threads + " threads");
             }
 
             if (line.hasOption("c")) {
@@ -144,9 +166,9 @@ public class MainCLI {
             }
 
             if (line.hasOption("s")) {
+                System.out.println("sampling " + line.getOptionValue("s") + " individuals");
                 createSamples(Integer.parseInt(line.getOptionValue("s")));
             }
-
 
             if (line.hasOption("or")) {
                 if (!graph_loaded) {
@@ -164,6 +186,7 @@ public class MainCLI {
                     writeVCFFile(line.getOptionValue("ov"));
                 }
             }
+
 
             // Finally
             if (line.hasOption("i")) {

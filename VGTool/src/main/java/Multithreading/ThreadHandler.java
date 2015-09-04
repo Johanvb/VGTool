@@ -10,6 +10,7 @@ import Multithreading.Threads.SamplerRunnable;
 import Multithreading.Threads.*;
 import Utilities.EnclosingModel;
 import com.google.common.collect.Lists;
+import Utilities.Constants;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,15 +18,16 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Semaphore;
 
 /**
  * Created by Johan on 07/05/15.
  */
 public class ThreadHandler {
 
-
     public static void startGraphShrinkerThreadsWithGraphs(Set<VariantGraph> graphSet) throws InterruptedException {
 
+        Semaphore threadPool = new Semaphore(Constants.threads);
         CountDownLatch latch = new CountDownLatch(graphSet.size());
 
         long t1 = System.currentTimeMillis();
@@ -33,7 +35,7 @@ public class ThreadHandler {
 
         for (VariantGraph g : graphSet) {
             System.out.println("Shrinking graph " + g.getId());
-            GraphShrinkerThread runnable = new GraphShrinkerThread(g, latch);
+            GraphShrinkerThread runnable = new GraphShrinkerThread(g, latch, threadPool);
             Thread thread = new Thread(runnable);
             thread.start();
         }
@@ -69,9 +71,8 @@ public class ThreadHandler {
 
     public static void startGraphProbabilityThreadsForGraphs(Set<VariantGraph> graphSet) throws InterruptedException {
 
-        int splitBy = Runtime.getRuntime().availableProcessors();
+        int splitBy = Constants.threads;
 
-        System.out.println("Available processors " + splitBy);
         long t1 = System.currentTimeMillis();
 
         for (VariantGraph g : graphSet) {
@@ -113,6 +114,7 @@ public class ThreadHandler {
         //Merge and then re-shrink.
         if (!setsForMerging.isEmpty()) {
             CountDownLatch latch = new CountDownLatch(setsForMerging.size());
+            Semaphore threadPool = new Semaphore(Constants.threads);
 
 
             long t1 = System.currentTimeMillis();
@@ -120,7 +122,7 @@ public class ThreadHandler {
             for (List<VariantGraph> graphsForChromosome : setsForMerging) {
                 System.out.println("Merging " + graphsForChromosome.size() + " graph for chromosome " + graphsForChromosome.get(0).getId());
 
-                GraphMergerRunnable mergerThread = new GraphMergerRunnable(graphsForChromosome, latch);
+                GraphMergerRunnable mergerThread = new GraphMergerRunnable(graphsForChromosome, latch, threadPool);
                 Thread thread = new Thread(mergerThread);
                 thread.start();
             }
@@ -142,9 +144,10 @@ public class ThreadHandler {
         long t1 = System.currentTimeMillis();
 
         CountDownLatch latch = new CountDownLatch(graphs.size());
+        Semaphore threadPool = new Semaphore(Constants.threads);
 
         for (VariantGraph graph : graphs) {
-            GraphExpanderRunnable expanderThread = new GraphExpanderRunnable(graph, latch);
+            GraphExpanderRunnable expanderThread = new GraphExpanderRunnable(graph, latch, threadPool);
             Thread thread = new Thread(expanderThread);
             thread.start();
         }
@@ -167,26 +170,16 @@ public class ThreadHandler {
 
 
         long t1 = System.currentTimeMillis();
-//        System.out.println("Splut by?");
-//        int splitBy = in.nextInt();
 
         CountDownLatch latch = new CountDownLatch(numberOfSamples);
+        Semaphore threadPool = new Semaphore(Constants.threads);
 
-//        int i = 0;
 
         for (SampledIndividual individual : individuals) {
 
-            SamplerRunnable samplerRunnable = new SamplerRunnable(graph, sampledGraph, individual, latch);
+            SamplerRunnable samplerRunnable = new SamplerRunnable(graph, sampledGraph, individual, latch, threadPool);
             Thread thread = new Thread(samplerRunnable);
             thread.start();
-//
-//            i++;
-//            if (i == numberOfSamples / splitBy) {
-//                System.out.println("Starting with i " + i);
-//                latch = new CountDownLatch(numberOfSamples / splitBy);
-//                i = 0;
-//            }
-
         }
         latch.await();
 
@@ -203,6 +196,7 @@ public class ThreadHandler {
         List<SampledGraph> sampledGraphs = new ArrayList<SampledGraph>();
 
         CountDownLatch latch = new CountDownLatch(numberOfSamples * EnclosingModel.chromosomeGraphs.keySet().size());
+        Semaphore threadPool = new Semaphore(Constants.threads);
         List<SampledIndividual> individuals = SampleUtilities.getSampledIndividuals(numberOfSamples);
 
         long t1 = System.currentTimeMillis();
@@ -215,7 +209,7 @@ public class ThreadHandler {
             sampledGraphs.add(sampledGraph);
 
             for (SampledIndividual individual : individuals) {
-                SamplerRunnable samplerRunnable = new SamplerRunnable(graph, sampledGraph, individual, latch);
+                SamplerRunnable samplerRunnable = new SamplerRunnable(graph, sampledGraph, individual, latch, threadPool);
                 Thread thread = new Thread(samplerRunnable);
                 thread.start();
             }

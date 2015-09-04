@@ -26,4 +26,6 @@ public class Constants {
     public static int queueSize = 2;
     public static float pickHeadProbability = 0.9f;
 
+    public static int threads = Runtime.getRuntime().availableProcessors();
+
 }
