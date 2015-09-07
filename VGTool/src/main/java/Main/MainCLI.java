@@ -80,7 +80,7 @@ public class MainCLI {
                                       .create("or"));
        options.addOption(OptionBuilder.withArgName("Integer")
                .hasArg()
-               .withDescription("Minimum context size (default=" + Constants.depthThreshold + ")")
+               .withDescription("Minimum context size (default=" + Constants.individualsThreshold + ")")
                .withLongOpt("context-size")
                .create("cs"));
        options.addOption(OptionBuilder.withArgName("Integer")
@@ -109,6 +109,7 @@ public class MainCLI {
 
         options.addOption("p", "probabilities", false, "Add probabilities to graph (implied by -s option)");
         options.addOption("i", "interactive", false, "Run program in interactive mode");
+        options.addOption("ct", "compress-trees", false, "Compress probability trees (reduced memory consumption)");
 
 		try {
 			// parse the command line arguments
@@ -141,6 +142,10 @@ public class MainCLI {
                 System.out.println("Maximum thread utilization is set to " + Constants.threads + " threads");
             }
 
+            if (options.hasOption("ct")) {
+                Constants.compressTrees = true;
+            }
+
             if (line.hasOption("c")) {
                 chromosome = line.getOptionValue("c");
                 System.out.println("Restricting input and analyses to chromosome " + chromosome);
@@ -165,10 +170,8 @@ public class MainCLI {
                 addProbabilities();
             }
 
-            if (line.hasOption("s")) {
-                System.out.println("sampling " + line.getOptionValue("s") + " individuals");
-                createSamples(Integer.parseInt(line.getOptionValue("s")));
-            }
+
+
 
             if (line.hasOption("or")) {
                 if (!graph_loaded) {
@@ -176,6 +179,11 @@ public class MainCLI {
                 }
                 System.out.println("Writing graph to file: " + line.getOptionValue("or"));
                 writeGraphs(line.getOptionValue("or"));
+            }
+
+            if (line.hasOption("s")) {
+                System.out.println("sampling " + line.getOptionValue("s") + " individuals");
+                createSamples(Integer.parseInt(line.getOptionValue("s")));
             }
 
             if (line.hasOption("ov")) {

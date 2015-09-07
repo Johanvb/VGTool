@@ -129,9 +129,6 @@ public class VGCompressedProbabilityTree {
 
                 String[] compressedGenotypes = key.split(":");
 
-                System.out.println(key);
-
-
                 VGProbabilityNode leaf = addNewGenotypesFromNode(start, compressedGenotypes);
                 CompressedNode child = compressed.children.get(key);
                 unCompress(leaf, child);

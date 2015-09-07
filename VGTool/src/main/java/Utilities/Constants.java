@@ -19,7 +19,7 @@ public class Constants {
     //Size of tree queue for sampling
     public static int treeQueueSize = 20;
 
-    public static boolean compressTrees = true;
+    public static boolean compressTrees = false;
     public static boolean compressIndividualSets = false;
     public static boolean shouldUseDatabase = false;
 

@@ -36,7 +36,6 @@ public class VGProbabilityNode extends JenaObject{
     public void setGenotype(VGProbabilityGenotype genotype) {
 
         this.genotype = GeneticsUtils.getGenotype(genotype);
-//        System.out.println("Genotype " + genotype.toString());
 
     }
 
@@ -154,7 +153,6 @@ public class VGProbabilityNode extends JenaObject{
 
         }
 
-//        System.out.println("Returning null " + choice + " accu " + accumulatedProbability + " Total " + totalProbabilityInSubTree + " Chilrden: " + children.size());
         return null;
     }
 
@@ -237,7 +235,6 @@ public class VGProbabilityNode extends JenaObject{
                 }
             }
         } else {
-//            System.out.println("Returning " + this.genotype.toString());
             return this;
         }
 

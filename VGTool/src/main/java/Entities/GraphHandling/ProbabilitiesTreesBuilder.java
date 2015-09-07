@@ -81,8 +81,7 @@ public class ProbabilitiesTreesBuilder {
                             buildProbabilities(child, individuals, successorPos, 0);
                         }
                     }
-                }
-            }
+                } }
 
             int totalIndividualsForProbability = tree.root.getNumberOfIndividuals();
 
@@ -92,29 +91,31 @@ public class ProbabilitiesTreesBuilder {
                 leaf.setProbability((1.0f * leaf.numberOfIndividuals) / totalIndividualsForProbability);
             }
 
+            if (Constants.compressTrees) {
+                position.setCompressedTree(new VGCompressedProbabilityTree(tree.getId()));
+                VGCompressedProbabilityTree compressedTree = position.getCompressedTree();
 
-            position.setCompressedTree(new VGCompressedProbabilityTree(tree.getId()));
-            VGCompressedProbabilityTree compressedTree = position.getCompressedTree();
+                List<String> paths = new ArrayList<String>();
+                List<Float> probabilities = new ArrayList<Float>();
+                List<Short> individualsCount = new ArrayList<Short>();
 
-            List<String> paths = new ArrayList<String>();
-            List<Float> probabilities = new ArrayList<Float>();
-            List<Short> individualsCount = new ArrayList<Short>();
+                tree.getAllPathsForChildren(paths, probabilities, individualsCount);
 
-            tree.getAllPathsForChildren(paths, probabilities, individualsCount);
+                int index = 0;
+                for (String path : paths) {
+                    compressedTree.putProbabilityForPath(path, probabilities.get(index), individualsCount.get(0));
+                    index++;
+                }
 
+                paths = null;
+                probabilities = null;
+                individualsCount = null;
 
-            int index = 0;
-            for (String path : paths) {
-                compressedTree.putProbabilityForPath(path, probabilities.get(index), individualsCount.get(0));
-                index++;
+                position.setProbabilityTree(null);  // force it to use compressed tree
+
+            } else {
+                tree.root.setProbabilityFromChildren();
             }
-
-            paths = null;
-            probabilities = null;
-            individualsCount = null;
-
-            position.setProbabilityTree(null);
-
         }
     }
 
