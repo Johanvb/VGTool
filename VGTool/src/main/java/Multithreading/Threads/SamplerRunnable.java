@@ -56,6 +56,8 @@ public class SamplerRunnable implements Runnable {
 
             while (index < graph.positions.size()) {
 
+
+
                 while (currentPath.size() > Constants.queueSize)
                     currentPath.remove(0);
 
@@ -116,9 +118,10 @@ public class SamplerRunnable implements Runnable {
         } catch (InterruptedException e) {
             System.out.println(e.toString());
         } finally {
-            if (sem != null)
-                sem.release();
+            sem.release();
             latch.countDown();
+
+            System.out.println("out of thread");
         }
     }
 
@@ -132,11 +135,9 @@ public class SamplerRunnable implements Runnable {
                 if (node.asString().equals(nodeAtPosition.asString())) {
                     foundIt = true;
                 }
-//                System.out.println("Node " + node.genotype.toString());
             }
 
             if (!foundIt) {
-//                System.out.println("Couldnt find " + nodeAtPosition.genotype.toString());
                 return false;
             }
         }

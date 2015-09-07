@@ -33,7 +33,7 @@ public class GraphProbabilityTreesRunnable implements Runnable {
 
 
         } finally {
-            System.out.println("Done for thread ");
+            System.out.println("GraphProbabilityTreesRunnable: Done for thread ");
             latch.countDown();
         }
     }
