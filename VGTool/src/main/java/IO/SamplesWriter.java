@@ -134,7 +134,11 @@ public class SamplesWriter {
 
         File file = new File(fileName);
 
-        file.getParentFile().mkdirs();
+        System.out.println(fileName);
+
+        if (file.getParentFile()!=null)
+            file.getParentFile().mkdirs();
+
         if (!file.exists()) {
             file.createNewFile();
         }
@@ -147,7 +151,7 @@ public class SamplesWriter {
         fop.write(firstColumns.getBytes());
 
         for (SampledIndividual individual : sampledGraphs.get(0).sampledIndividuals) {
-            fop.write(individual.id.getBytes());
+            fop.write(("i" + individual.id).getBytes()); // Some tools disallow numeric individual IDs
             String tab = "\t";
             fop.write(tab.getBytes());
         }
@@ -204,7 +208,9 @@ public class SamplesWriter {
                     fop.write(".\t".getBytes());
                 }
 
-                fop.write(("100.0\tPASS\tMQ=60;MQ0=0;DP=8876259;AN=6330\tGT\t").getBytes());
+                //fop.write(("100.0\tPASS\tMQ=60;MQ0=0;DP=8876259;AN=6330\tGT\t").getBytes());
+                // FIXME: We might have something interesting to write in INFO field, but for now nothing
+                fop.write(("100.0\tPASS\t.\tGT\t").getBytes());
 
                 for (SampledIndividual individual : sampledGraph.sampledIndividuals) {
 

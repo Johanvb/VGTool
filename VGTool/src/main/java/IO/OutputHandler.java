@@ -37,7 +37,8 @@ public class OutputHandler {
 
         File file = new File(filename);
 
-        file.getParentFile().mkdirs();
+        if (file.getParent() != null)
+            file.getParentFile().mkdirs();
         if (!file.exists()) {
             file.createNewFile();
         }
